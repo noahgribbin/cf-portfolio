@@ -32,19 +32,11 @@ header{
 	margin-bottom: 5px;
 
 }
-
-.project-name{
-	font-size: 2em;
-	padding-bottom: .5em;
-}
 .project-container{
 	width: 100vw;
 	border-bottom: 2px solid black;
 	/*border-top: 2px solid black;*/
 	margin-bottom: 1em;
-}
-.project-pic{
-	width: 100vw;
 }
 @media screen and (min-width:760px){
 header{
