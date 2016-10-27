@@ -26,19 +26,42 @@
 	</header>
 
 	<body>
-		<section id='projects'>
+		<section id='projects' class="tab-content">
+			<div>
+				<ul id="filters">
+					<li>
+						<select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+					</li>
+				</ul>
+			</div>
 			<article class="template project-container" data category='test'>
 				<header>
-					<img class="project-pic" src="test" alt="" />
+					<img class="project-pic" src="" alt="" />
 					<h1 class="project-name">Title</h1>
 				</header>
 				<section class="project-description"></section>
 			</article>
-
+		</section>
+		<section id="about" class="tab-content">
+			<header>
+				Welcome to my Blog
+			</header>
+			<section>
+				<h1>Some of my intrests:</h1>
+				<ul>
+					<li>Coding</li>
+					<li>Sharing what I've learned</li>
+					<li>Hanging with my family</li>
+				</ul>
+			</section>
 		</section>
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="index.js"></script>
 		<script type="text/javascript" src="myProjects.js"></script>
 		<script type="text/javascript" src="project.js"></script>
+		<script type="text/javascript" src="ProjectView.js"></script>
 	</body>
+
 </html>
