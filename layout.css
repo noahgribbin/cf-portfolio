@@ -71,12 +71,8 @@ header{
 
 }
 .project-container{
-	height: 100vh;
 	width: 75vw;
 	margin: auto;
 	margin-bottom: 3em;
-}
-.project-pic{
-	width: 100%;
 }
 }

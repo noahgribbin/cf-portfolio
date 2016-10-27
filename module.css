@@ -14,11 +14,12 @@ padding: 4px 0 4px 0;
 }
 .project-description{
 	width: 100%;
+	margin-bottom: 1em;
 }
 .project-name{
 	font-size: 2em;
 	padding-bottom: .5em;
 }
 .project-pic{
-	width: 100vw;
+	width: 100%;
 }
