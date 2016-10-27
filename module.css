@@ -1,25 +1,31 @@
 /*THE INSIDE OF BOXES*/
-.main-nav ul li{
-	width: 100%	;
-	display: none;
-
-}
 .nav-button{
-clear: both;
 width: 100%;
+display: none;
+clear: both;
 text-align: center;
-font-size: 2em;
-border-bottom: 2px solid black;
-padding: 4px 0 4px 0;
+/*font-size: 3em;*/
+/*padding: auto 0 auto 0;*/
 }
 .project-description{
-	width: 100%;
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 	margin-bottom: 1em;
 }
 .project-name{
+	text-align: center;
 	font-size: 2em;
 	padding-bottom: .5em;
 }
 .project-pic{
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+.filter{
+	text-align: center;
+}
+.nav-ul{
 	width: 100%;
 }
