@@ -1,14 +1,14 @@
+/*FOR DEVIDING THE PAGE INTO SECTIONS*/
 /*header*/
-
+header{
+	padding-bottom: 3px;
+}
 	/*Title*/
 .title{
 	display: inline-block;
 	float: left;
 	width: 30%;
-	/*height: 7vh;
-	font-size: 7vh;*/
-	/*padding-right: 0;*/
-
+	font-size: 3em;
 }
 	/*hamburger*/
 .hamburger{
@@ -16,12 +16,14 @@
 	text-align: right;
 	display: inline-block;
 	width: 70%;
+	font-size: 3em;
 }
 .hamburger-close{
 	float: right;
 	text-align: right;
 	display: inline-block;
 	width: 70%;
+	font-size: 3em;
 }
 	/*Nav*/
 .main-nav{
@@ -30,51 +32,26 @@
 	margin-bottom: 5px;
 
 }
-.main-nav ul li{
-	width: 100%	;
-	display: none;
-
-}
-.main-nav:hover{
-	/*display: none;*/
-
-}
-/*.hamburger:hover{
-	display: none;
-
-}*/
-.nav-button{
-clear: both;
-width: 100%;
-text-align: center;
-}
-.project{
+.project-container{
 	width: 100vw;
-	border: 2px solid black;
-	margin-bottom: 2px;
-
+	border-bottom: 2px solid black;
+	/*border-top: 2px solid black;*/
+	margin-bottom: 1em;
 }
-.project-image{
-	width: 100%;
-}
-.project-description{
-	width: 100%;
-}
-
 @media screen and (min-width:760px){
-	header{
-	height: 10vh;
-	font-size: 5vh;
+header{
+	/*height: 10vh;*/
 	}
 .title{
-
+	font-size: 3em;
+	width: 50%;
 }
 .hamburger{
 	display: none;
 }
 .main-nav{
 	display: inline-block;
-	width: 70%;
+	width: 50%;
 
 }
 .main-nav ul{
@@ -83,8 +60,9 @@ text-align: center;
 
 }
 .nav-button{
+	font-size: 3em;
 	display: inline-block;
-	width: 49%;
+	width: 50%;
 }
 .main-nav ul li{
 	display: inline-block;
@@ -92,9 +70,13 @@ text-align: center;
 	/*float: left;*/
 
 }
-.project{
-	width: 50vw;
+.project-container{
+	height: 100vh;
+	width: 75vw;
 	margin: auto;
-	margin-bottom: 5px;
+	margin-bottom: 3em;
+}
+.project-pic{
+	width: 100%;
 }
 }
