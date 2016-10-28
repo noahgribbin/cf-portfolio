@@ -13,12 +13,14 @@
 	<link rel="stylesheet" href="theme.css" media="screen" title="no title">
 	<script id="project-template" type="text/x-handlebars-template">
 		<article class="project-container" data-category="{{category}}">
-			<header>
-				<img class="project-pic" src="{{pic}}" alt="" />
-				<h1 class="project-name">{{title}}</h1>
-			</header>
-			<section class="project-description">{{{body}}}</section>
-			<a href="#" class="read-on">More &rarr;</a>
+        <div class="pic-wrapper">
+				  <img class="project-pic" src="{{pic}}" alt="" />
+        </div><!--
+       --><div class="text-wrapper">
+				  <h1 class="project-name">{{title}}</h1>
+			    <section class="project-description">{{{body}}}</section>
+			    <a href="#" class="read-on">More &rarr;</a>
+        </div>
 		</article>
 	</script>
 	<script id="category-template" type="text/x-handlebars-template">
