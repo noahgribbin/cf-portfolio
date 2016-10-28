@@ -39,10 +39,10 @@ header{
 }
 @media screen and (min-width:760px){
 header{
-	/*height: 10vh;*/
+	
 	}
 .title{
-	font-size: 3em;
+	/*font-size: 3em;*/
 	width: 30%;
 }
 .hamburger{
@@ -61,7 +61,7 @@ header{
 .nav-button{
 	display: inline-block;
 	width: 25%;
-	font-size: 3em;
+	/*font-size: 3em;*/
 }
 .project-container{
 	width: 75vw;

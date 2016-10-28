@@ -8,6 +8,11 @@ body{
 header{
 	/*background-color: #CFDEF5;*/
 }
-nav-button{
-	
+.nav-button{
+
+}
+.nav-button:hover{
+	/*background-color: #FFC47C;*/
+	color: #FFC47C;
+
 }
