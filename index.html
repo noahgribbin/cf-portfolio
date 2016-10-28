@@ -4,12 +4,13 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Noah Gribbin</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="../vendors/icomoon/style.css" media="screen" title="no title">
 	<link rel="stylesheet" href="base.css" media="screen" title="no title">
 	<link rel="stylesheet" href="module.css" media="screen" title="no title">
 	<link rel="stylesheet" href="state.css" media="screen" title="no title">
 	<link rel="stylesheet" href="layout.css" media="screen" title="no title">
-	<link rel="stylesheet" href="../vendors/icomoon/style.css" media="screen" title="no title">
+	<link rel="stylesheet" href="theme.css" media="screen" title="no title">
 </head>
 
 <body>
@@ -19,26 +20,52 @@
 		<div class="hamburger-close icon-menu"></div>
 		<nav class="main-nav">
 			<ul class="nav-ul">
-				<li class="nav-button icon-twitter"><a href="https://github.com/noahgribbin">Github</a></li>
-				<li class="nav-button icon-github"><a href="https://twitter.com/?lang=en">Twitter</a></li>
+				<li class="nav-button tab" data-content="projects"><a href="#" class="icon-home">Home</a></li><!--
+				--><li class="nav-button tab" data-content="about"><a href="#" class="icon-about">About</a></li><!--
+				--><li class="nav-button"><a href="https://github.com/noahgribbin" class="icon-twitter">Github</a></li><!--
+				--><li class="nav-button"><a href="https://twitter.com/?lang=en" class="icon-github">Twitter</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<body>
-		<section id='projects'>
+		<section id='projects' class="tab-content">
+			<div>
+				<ul id="filters" class="filter">
+					<li>
+						<select id="category-filter">
+                			<option value="">-- Filter by Categories --</option>
+              			</select>
+					</li>
+				</ul>
+			</div>
 			<article class="template project-container" data category='test'>
 				<header>
-					<img class="project-pic" src="test" alt="" />
+					<img class="project-pic" src="" alt="" />
 					<h1 class="project-name">Title</h1>
 				</header>
 				<section class="project-description"></section>
+				<a href="#" class="read-on">More &rarr;</a>
 			</article>
-
+		</section>
+		<section id="about" class="tab-content">
+			<header>
+				Welcome to my Blog
+			</header>
+			<section>
+				<h1>Some of my intrests:</h1>
+				<ul>
+					<li>Coding</li>
+					<li>Sharing what I've learned</li>
+					<li>Hanging with my family</li>
+				</ul>
+			</section>
 		</section>
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="index.js"></script>
 		<script type="text/javascript" src="myProjects.js"></script>
 		<script type="text/javascript" src="project.js"></script>
+		<script type="text/javascript" src="ProjectView.js"></script>
 	</body>
+
 </html>

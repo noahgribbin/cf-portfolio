@@ -1,14 +1,13 @@
 /*FOR DEVIDING THE PAGE INTO SECTIONS*/
 /*header*/
 header{
-	padding-bottom: 3px;
+
 }
 	/*Title*/
 .title{
 	display: inline-block;
 	float: left;
 	width: 30%;
-	font-size: 3em;
 }
 	/*hamburger*/
 .hamburger{
@@ -44,14 +43,14 @@ header{
 	}
 .title{
 	font-size: 3em;
-	width: 50%;
+	width: 30%;
 }
 .hamburger{
 	display: none;
 }
 .main-nav{
 	display: inline-block;
-	width: 50%;
+	width: 70%;
 
 }
 .main-nav ul{
@@ -60,23 +59,13 @@ header{
 
 }
 .nav-button{
+	display: inline-block;
+	width: 25%;
 	font-size: 3em;
-	display: inline-block;
-	width: 50%;
-}
-.main-nav ul li{
-	display: inline-block;
-	width: 49%;
-	/*float: left;*/
-
 }
 .project-container{
-	height: 100vh;
 	width: 75vw;
 	margin: auto;
 	margin-bottom: 3em;
-}
-.project-pic{
-	width: 100%;
 }
 }
