@@ -31,8 +31,11 @@ projectView.handleCategoryFilter = function() {
 projectView.renderIndexPage = function(){
   Project.allProjects.forEach(function(a){
     $('#projects').append(a.toHtml('#project-template'));
-    if ($('#category-filter option:contains("'+a.category+'")').length===0) {
+    // console.log(a.toHtml('#project-template'));
+    console.log(($('#category-filter option:contains("'+a.category+'")')));
+    if ($('#category-filter option[value="'+a.category+'"]').length===0) {
       $('#category-filter').append(a.toHtml('#category-template'));
+      // console.log(a.toHtml('#category-template'));
     }
   });
   projectView.setTeaser();

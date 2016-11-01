@@ -17,7 +17,7 @@ Project.loadAll = function(inputData){
 };
 Project.fetchAll = function(){
   if(localStorage.myProjects){
-    var parsedData = JSON.parse(localStorage.myProjects)
+    var parsedData = JSON.parse(localStorage.myProjects);
     Project.loadAll(parsedData);
     projectView.renderIndexPage();
   }else {
