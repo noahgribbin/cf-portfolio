@@ -5,9 +5,9 @@ function Project (parts){
 };
 Project.allProjects = [];
 
-Project.prototype.toHtml = function(){
-	 var templateScript = $('#project-template').html();
-	 var theTemplate = Handlebars.compile(templateScript);
+Project.prototype.toHtml = function(scriptTemplateId){
+  var theTemplate = Handlebars.compile($(scriptTemplateId).text());
+
 	 return theTemplate(this);
 };
 Project.loadAll = function(inputData){
