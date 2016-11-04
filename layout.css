@@ -62,18 +62,25 @@ header{
 }
 /*Projects*/
 .project-container{
-	width: 75vw;
-	margin: auto;
-	margin-bottom: 3em;
+  width: 1000px;
+  height: 320px;
+  margin: auto;
+	margin-top:3em;
 }
 .pic-wrapper{
-  width: 60%;
+  width: 600px;
   height: 100%;
   display: inline-block;
 }
+.project-pic{
+height: 100%;
+}
 .text-wrapper{
+  width: 400px;
+  height: 100%;
   display: inline-block;
-  width: 40%;
+  overflow-y: auto;
 }
 /**/
+
 }
