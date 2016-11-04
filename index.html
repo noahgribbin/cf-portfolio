@@ -11,6 +11,21 @@
 	<link rel="stylesheet" href="state.css" media="screen" title="no title">
 	<link rel="stylesheet" href="layout.css" media="screen" title="no title">
 	<link rel="stylesheet" href="theme.css" media="screen" title="no title">
+	<script id="project-template" type="text/x-handlebars-template">
+		<article class="project-container" data-category="{{category}}">
+        <div class="pic-wrapper">
+				  <img class="project-pic" src="{{pic}}" alt="" />
+        </div><!--
+     --><div class="text-wrapper">
+				  <h1 class="project-name">{{title}}</h1>
+			    <section class="project-description">{{{body}}}</section>
+			    <a href="#" class="read-on">More &rarr;</a>
+        </div>
+		</article>
+	</script>
+	<script id="category-template" type="text/x-handlebars-template">
+		<option value="{{category}}">{{category}}</option>
+	</script>
 </head>
 
 <body>
@@ -20,10 +35,10 @@
 		<div class="hamburger-close icon-menu"></div>
 		<nav class="main-nav">
 			<ul class="nav-ul">
-				<li class="nav-button tab" data-content="projects"><a href="#" class="icon-home">Home</a></li><!--
-				--><li class="nav-button tab" data-content="about"><a href="#" class="icon-about">About</a></li><!--
-				--><li class="nav-button"><a href="https://github.com/noahgribbin" class="icon-twitter">Github</a></li><!--
-				--><li class="nav-button"><a href="https://twitter.com/?lang=en" class="icon-github">Twitter</a></li>
+				<li class="nav-button tab icon-home" data-content="projects">	<a href="#" class=""></a></li><!--
+				--><li class="nav-button tab icon-about" data-content="about">About<a href="#" class=""></a></li><!--
+				--><li class="nav-button icon-twitter">Github<a href="https://github.com/noahgribbin" class=""></a></li><!--
+				--><li class="nav-button icon-github">Twitter<a href="https://twitter.com/?lang=en" class=""></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -32,21 +47,11 @@
 		<section id='projects' class="tab-content">
 			<div>
 				<ul id="filters" class="filter">
-					<li>
-						<select id="category-filter">
-                			<option value="">-- Filter by Categories --</option>
-              			</select>
-					</li>
+					<select id="category-filter">
+						<option value="">-- filter by category --</option>
+					</select>
 				</ul>
 			</div>
-			<article class="template project-container" data category='test'>
-				<header>
-					<img class="project-pic" src="" alt="" />
-					<h1 class="project-name">Title</h1>
-				</header>
-				<section class="project-description"></section>
-				<a href="#" class="read-on">More &rarr;</a>
-			</article>
 		</section>
 		<section id="about" class="tab-content">
 			<header>
@@ -61,11 +66,15 @@
 				</ul>
 			</section>
 		</section>
+    <footer>
+      <p id="fun-facts"><p>
+    </footer>
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 		<script type="text/javascript" src="index.js"></script>
 		<script type="text/javascript" src="myProjects.js"></script>
 		<script type="text/javascript" src="project.js"></script>
-		<script type="text/javascript" src="ProjectView.js"></script>
+		<script type="text/javascript" src="projectView.js"></script>
 	</body>
 
 </html>

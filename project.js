@@ -1,22 +1,44 @@
-var projects = [];
-function Project (parts){
-	this.title = parts.title;
-	this.body = parts.body;
-	this.pic = parts.pic;
-	this.category = parts.category;
-};
-Project.prototype.toHtml = function(){
-	var $newproject = $('article.template').clone()
-	$newproject.attr('data-category', this.category);
-	$newproject.find('h1').text(this.title);
-	$newproject.find('section.project-description').html(this.body);
-	$newproject.find('.project-pic').attr('src', this.pic);
-	$newproject.removeClass('template');
-	return $newproject;
-}
-myProjects.forEach(function(ele){
-	projects.push(new Project(ele));
-});
-projects.forEach(function(project){
-	$('#projects').append(project.toHtml());
-});
+(function(module){
+  function Project (parts){
+    for (var keys in parts) {
+  	   this[keys] = parts[keys];
+    }
+  };
+  Project.allProjects = [];
+
+  Project.prototype.toHtml = function(scriptTemplateId){
+    var theTemplate = Handlebars.compile($(scriptTemplateId).text());
+
+  	 return theTemplate(this);
+  };
+  Project.loadAll = function(inputData){
+    Project.allProjects = inputData.map(function(ele) {
+      return new Project(ele);
+    });
+  };
+  Project.numWordsAll = function(){
+    return Project.allProjects.map(function(project){
+      return project.body.split(' ').length;
+    })
+    .reduce(function(curr, next){
+      return curr+next;
+    }, 0);
+  };
+  Project.fetchAll = function(){
+    if(localStorage.myProjects){
+      var parsedData = JSON.parse(localStorage.myProjects);
+      Project.loadAll(parsedData);
+      projectView.renderIndexPage();
+      console.log('local');
+    }else {
+      $.getJSON('myProjects.json', function(data){
+        var strigifiedData = JSON.stringify(data);
+        localStorage.setItem('myProjects', strigifiedData);
+        Project.loadAll(data);
+        projectView.renderIndexPage();
+        console.log('new');
+      });
+    }
+  };
+  module.Project = Project;
+})(window);
