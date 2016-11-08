@@ -37,50 +37,7 @@ header{
 	/*border-top: 2px solid black;*/
 	margin-bottom: 1em;
 }
-@media screen and (min-width:760px){
-/*Header*/
-header{
-	}
-.title{
-	width: 30%;
-}
-.hamburger{
-	display: none;
-}
-.main-nav{
-	display: inline-block;
-	width: 70%;
-}
-.main-nav ul{
-	display: inline-block;
-	width: 100%;
 
-}
-.nav-button{
-	display: inline-block;
-	width: 25%;
-}
-/*Projects*/
-.project-container{
-  width: 1000px;
-  height: 320px;
-  margin: auto;
-	margin-top:3em;
-}
-.pic-wrapper{
-  width: 600px;
-  height: 100%;
-  display: inline-block;
-}
-.project-pic{
-height: 100%;
-}
-.text-wrapper{
-  width: 400px;
-  height: 100%;
-  display: inline-block;
-  overflow-y: auto;
-}
 /**/
 
 }

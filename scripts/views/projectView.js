@@ -17,14 +17,6 @@
       $('.nav-button').css('display', 'none');
     });
   };
-  projectView.navigation = function(){
-    $('.main-nav').on('click', '.tab', function(){
-      $('.tab-content').hide();
-  	  var connector = $(this).attr('data-content');
-  	  $('#'+connector).fadeIn();
-    });
-    $('.main-nav .tab:first').click();
-  };
   projectView.setTeaser = function(){
     $('.project-description *:nth-of-type(n+2)').hide();
     $('#projects').on('click', 'a.read-on', function(event){
@@ -55,7 +47,6 @@
     });
     projectView.hamburger();
     projectView.setTeaser();
-    projectView.navigation();
     projectView.handleCategoryFilter();
     $('#fun-facts').text(Project.numWordsAll()+' words in all project bodies');
   };
