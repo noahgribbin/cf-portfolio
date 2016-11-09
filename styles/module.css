@@ -1,0 +1,88 @@
+/*THE INSIDE OF BOXES*/
+.nav-button{
+width: 100%;
+display: none;
+clear: both;
+text-align: center;
+/*font-size: 3em;*/
+/*padding: auto 0 auto 0;*/
+}
+.project-description{
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	margin-bottom: 1em;
+}
+.project-name{
+	text-align: center;
+	font-size: 2em;
+	padding-bottom: .5em;
+}
+.project-pic{
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+.filter{
+	text-align: center;
+}
+.nav-ul{
+	width: 100%;
+}
+.social-link{
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (min-width:760px){
+/*Header*/
+header{
+	}
+.title{
+	width: 30%;
+}
+.hamburger{
+	display: none;
+}
+.main-nav{
+	display: inline-block;
+	width: 70%;
+}
+.main-nav ul{
+	display: inline-block;
+	width: 100%;
+  overflow: hidden;
+}
+.nav-button{
+	display: inline-block;
+	width: 25%;
+  /*float: left;*/
+}
+.nav-button a{
+  display: block;
+color: white;
+text-align: center;
+/*padding: 14px 16px;*/
+text-decoration: none;
+}
+/*Projects*/
+.project-container{
+  width: 1000px;
+  height: 320px;
+  margin: auto;
+	margin-top:3em;
+}
+.pic-wrapper{
+  width: 600px;
+  height: 100%;
+  display: inline-block;
+}
+.project-pic{
+height: 100%;
+}
+.text-wrapper{
+  width: 400px;
+  height: 100%;
+  display: inline-block;
+  overflow-y: auto;
+}

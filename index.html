@@ -6,11 +6,11 @@
 	<title>Noah Gribbin</title>
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<link rel="stylesheet" href="../vendors/icomoon/style.css" media="screen" title="no title">
-	<link rel="stylesheet" href="base.css" media="screen" title="no title">
-	<link rel="stylesheet" href="module.css" media="screen" title="no title">
-	<link rel="stylesheet" href="state.css" media="screen" title="no title">
-	<link rel="stylesheet" href="layout.css" media="screen" title="no title">
-	<link rel="stylesheet" href="theme.css" media="screen" title="no title">
+	<link rel="stylesheet" href="styles/base.css" media="screen" title="no title">
+  <link rel="stylesheet" href="styles/layout.css" media="screen" title="no title">
+	<link rel="stylesheet" href="styles/module.css" media="screen" title="no title">
+	<link rel="stylesheet" href="styles/state.css" media="screen" title="no title">
+	<link rel="stylesheet" href="styles/theme.css" media="screen" title="no title">
 	<script id="project-template" type="text/x-handlebars-template">
 		<article class="project-container" data-category="{{category}}">
         <div class="pic-wrapper">
@@ -35,23 +35,23 @@
 		<div class="hamburger-close icon-menu"></div>
 		<nav class="main-nav">
 			<ul class="nav-ul">
-				<li class="nav-button tab icon-home" data-content="projects">	<a href="#" class=""></a></li><!--
-				--><li class="nav-button tab icon-about" data-content="about">About<a href="#" class=""></a></li><!--
-				--><li class="nav-button icon-twitter">Github<a href="https://github.com/noahgribbin" class=""></a></li><!--
-				--><li class="nav-button icon-github">Twitter<a href="https://twitter.com/?lang=en" class=""></a></li>
+				<li class="nav-button tab" data-content="projects">	<a href="/" class="icon-home"></a></li><!--
+				--><li class="nav-button tab" data-content="about"><a href="/about" class="icon-about">About</a></li><!--
+				--><li class="nav-button "><a href="https://github.com/noahgribbin" class="icon-twitter">Github</a></li><!--
+				--><li class="nav-button "><a href="https://twitter.com/?lang=en" class="icon-github">Twitter</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<body>
+    <div>
+      <ul id="filters" class="filter">
+        <select id="category-filter">
+          <option value="">-- filter by category --</option>
+        </select>
+      </ul>
+    </div>
 		<section id='projects' class="tab-content">
-			<div>
-				<ul id="filters" class="filter">
-					<select id="category-filter">
-						<option value="">-- filter by category --</option>
-					</select>
-				</ul>
-			</div>
 		</section>
 		<section id="about" class="tab-content">
 			<header>
@@ -70,11 +70,14 @@
       <p id="fun-facts"><p>
     </footer>
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-		<script type="text/javascript" src="index.js"></script>
-		<script type="text/javascript" src="myProjects.js"></script>
-		<script type="text/javascript" src="project.js"></script>
-		<script type="text/javascript" src="projectView.js"></script>
+		<!-- <script type="text/javascript" src="myProjects.js"></script> -->
+		<script type="text/javascript" src="scripts/models/project.js"></script>
+		<script type="text/javascript" src="scripts/views/projectView.js"></script>
+		<script type="text/javascript" src="scripts/controllers/projectController.js"></script>
+		<script type="text/javascript" src="scripts/controllers/aboutController.js"></script>
+		<script type="text/javascript" src="scripts/controllers/routes.js"></script>
 	</body>
 
 </html>
