@@ -26,6 +26,13 @@
 	<script id="category-template" type="text/x-handlebars-template">
 		<option value="{{category}}">{{category}}</option>
 	</script>
+  <script id="repo-template" type="text/x-handlebars-template">
+    <li>
+      <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+      <p>Description: {{description}}</p>
+    </li>
+    <br>
+  </script>
 </head>
 
 <body>
@@ -44,13 +51,14 @@
 	</header>
 
 	<body>
-    <div>
+    <!-- <div>
+    UNSURE IF I WANT TO CONTINUE USING. MAY BRING BACK
       <ul id="filters" class="filter">
         <select id="category-filter">
-          <option value="">-- filter by category --</option>
+          <option value="">filter by category</option>
         </select>
       </ul>
-    </div>
+    </div> -->
 		<section id='projects' class="tab-content">
 		</section>
 		<section id="about" class="tab-content">
@@ -64,17 +72,28 @@
 					<li>Sharing what I've learned</li>
 					<li>Hanging with my family</li>
 				</ul>
+        <br>
+        <ul class="project-repos">
+
+        </ul>
 			</section>
 		</section>
     <footer>
       <p id="fun-facts"><p>
     </footer>
+    <!--Vendors-->
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-		<!-- <script type="text/javascript" src="myProjects.js"></script> -->
+    <!--Github Token-->
+    <script type="text/javascript" src="/githubToken.js"></script>
+    <!--Models-->
 		<script type="text/javascript" src="scripts/models/project.js"></script>
+		<script type="text/javascript" src="scripts/models/repo.js"></script>
+    <!--Views-->
 		<script type="text/javascript" src="scripts/views/projectView.js"></script>
+		<script type="text/javascript" src="scripts/views/repoView.js"></script>
+    <!--Controllers-->
 		<script type="text/javascript" src="scripts/controllers/projectController.js"></script>
 		<script type="text/javascript" src="scripts/controllers/aboutController.js"></script>
 		<script type="text/javascript" src="scripts/controllers/routes.js"></script>
