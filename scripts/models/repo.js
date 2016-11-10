@@ -1,19 +1,17 @@
 (function(module) {
   var repos = {};
 
-  repos.allRepos = [];
-
   repos.requestRepos = function (callback) {
-    $.ajax({
-      url:'https://api.github.com/users/noahgribbin/repos',
-      type:'GET',
-      headers:{'Authorization': 'token ' + githubToken},
-      success:function(data, message, xhr){
-        console.log(data);
+    $.when(
+      $.get('/github/users/noahgribbin/repos', function(data){
         repos.allRepos = data;
-        callback();
-      }
-    });
+        console.log(data);
+      }),
+      $.get('/github/users/noahgribbin/followers', function(data){
+        repos.followers = data;
+        console.log(data);
+      })
+    ).done(callback);
   };
 
   repos.withTheAttribute = function(myAttr) {
